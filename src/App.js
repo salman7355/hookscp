@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import MovieList from "./Components/MovieList";
 
 function App() {
+  const movies = [
+    {
+      title: "card Title",
+      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      image: "https://picsum.photos/200/100",
+    },
+    {
+      title: "card Title",
+      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      image: "https://picsum.photos/200/101",
+    },
+    {
+      title: "card Title",
+      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      image: "https://picsum.photos/200/102",
+    },
+    {
+      title: "card Title",
+      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      image: "https://picsum.photos/200/103",
+    },
+    {
+      title: "card Title",
+      text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      image: "https://picsum.photos/200/104",
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MovieList movie={movies} />
     </div>
   );
 }
