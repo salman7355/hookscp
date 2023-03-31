@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import MovieCard from "./MovieCard";
-import MovieList from "./MovieList";
 
 const Filter = ({ handleSearchItem }) => {
   const [SearchItem, setSearchItem] = useState("");
@@ -16,6 +14,7 @@ const Filter = ({ handleSearchItem }) => {
           border: "none",
         }}
         type="text"
+        className="inp"
         placeholder="Enter Movie Name"
         value={SearchItem}
         onChange={(event) => {

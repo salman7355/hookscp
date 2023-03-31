@@ -5,6 +5,14 @@ import MovieList from "./Components/MovieList";
 import Filter from "./Components/Filter";
 
 function App() {
+  const getMovie = (name) => {
+    setMovies(
+      movies.filter((item) => {
+        return item.title.toLowerCase().includes(name.toLowerCase());
+      })
+    );
+  };
+
   const [movies, setMovies] = useState([
     {
       title: "Joker",
@@ -32,14 +40,6 @@ function App() {
       image: "https://picsum.photos/200/104",
     },
   ]);
-
-  const getMovie = (name) => {
-    setMovies(
-      movies.filter((item) =>
-        item.title.toLowerCase().includes(name.toLowerCase())
-      )
-    );
-  };
 
   return (
     <div className="App">
